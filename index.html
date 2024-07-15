@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Client Transactions</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1 class="text-center bg-black w-50 mx-auto mt-2 rounded text-white">Client Transactions</h1>
+    <div class="inputs text-center w-50 mx-auto my-4 ">
+        
+        <input type="text" class="form-control my-5" id="clientFilter" placeholder="Filter by Client Name:" oninput="filterClients()">
+    
+        <input type="number" class="form-control " placeholder="Filter by Transaction Amount:" id="transactionFilter" oninput="filterClients()">
+    </div>
+    
+        <table class="table" id="clientsTable">
+            <thead>
+                <tr>
+                    <th>Client Name</th>
+                    <th>Transaction Amount</th>
+                    <th>Transaction Date</th>
+                </tr>
+            </thead>
+            <tbody id="clientsTableBody">
+            </tbody>
+        </table>
+    
+        <canvas id="transactionChart" width="400" height="200"></canvas>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/index.js"></script>
+
+</body>
+</html>
